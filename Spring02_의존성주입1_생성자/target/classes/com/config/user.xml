@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 빈 등록 -->
+		<bean id ="xxx" class="com.service.DeptServiceImpl">
+		<constructor-arg name="name" value ="홍길동"></constructor-arg>
+			<constructor-arg name="x" ref ="yyy"></constructor-arg>
+		</bean>
+	
+	
+		<bean id ="xxx2" class="com.service.DeptServiceImpl">
+			<constructor-arg name="x" ref ="yyy"></constructor-arg>
+		</bean>
+		<bean id ="yyy" class="com.dao.DeptDAO"></bean>
+
+</beans>
